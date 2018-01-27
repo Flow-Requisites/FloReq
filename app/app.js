@@ -1,6 +1,6 @@
-var testdata = { "departments": [
+var testdata = { "department": [
                 {
-                  "name": "Computer Engineering",
+                  "name": "compe",
                   "courses": [
                     {
                       "coursename" : "ECE 315",
@@ -24,18 +24,23 @@ function listening() {
   console.log('listening ...');
 }
 
-app.get('/search/:department/', getDepartment);
+app.get('/search/:department/:specialization/', getDepartment);
 
 function getDepartment(request, response) {
   var department = request.params.department;
+  var specialization = request.params.specialization;
   var reply;
 
-  // if (testdata[department]) {
+  if (testdata.department.some(item => item.name === department)) {
     reply = {
       status: "found",
       data: testdata
     }
-  // }
+  } else {
+    reply = {
+      status: "department cannot be found"
+    }
+  }
   response.send(reply);
 }
 
