@@ -1,220 +1,248 @@
 {
-    "Department":{
-        "COMPE":{
-        "course":[
-            {
-                "coursename": "CMPUT 274",
-                "prereq":[]
-                
-            },
-            {
-                "coursename": "ECE 201",
-                "prereq":[]
+	"department": [{
+		"compe": {
+			"course": [{
+					"coursename": "CMPUT 274",
+					"prereq": []
 
-            },
-            {
-                "coursename": "ECE 202",
-                "prereq":[
-                    {"coursename": "MATH 101"},
-                    {"coursename": "MATH 102"}
-                ]
-            },
-            {
-                "coursename": "ECE 210",
-                "prereq": ""
-            },
-            {
-                "coursename": "MATH 201",
-                "prereq":[
-                    {"coursename": "MATH 209"}
-                ]
-            },
-            {
-                "coursename": "MATH 209",
-                "prereq":[
-                    {"coursename": "MATH 201"}
-                ]
-            },
-            {
-                "coursename": "ENGLISH ELECTIVE",
-                "prereq": ""
+				},
+				{
+					"coursename": "ECE 201",
+					"prereq": []
 
-            },
-            {
-                "coursename": "CMPUT 272",
-                "prereq": ""
-            },
-            {
-                "coursename": "CMPUT 275",
-                "prereq":[
-                   {"coursename": "CMPUT 274"}
-                ]
-            },
-            {
-                "coursename": "ECE 203",
-                "prereq":[
-                    {"coursename": "ECE 202"}
-                ]
-            },
-            {
-                "coursename": "ECE 212",
-                "prereq":[
-                    {"coursename":"ECE 210"}
-                ]
-            },
-            {
-                "coursename":"ECE 240",
-                "prereq":[
-                    {"coursename":"ECE 202"},
-                    {"coursename":"MATH 201"}
-                ]
-            },
-            {
-                "coursename":"PHYS 230",
-                "prereq":[
-                    {"coursename":"MATH 100"},
-                    {"coursename":"PHYS 130"}
-                ]
-            },
-            {
-                "coursename": "ECE 302",
-                "prereq":[
-                    {"coursename": "ECE 203"}
-                ]
-            },
-            {
-                "coursename":"ECE 311",
-                "prereq":[
-                    {"coursename":"ECE 212"}
-                ]
-            },
-            {
-                "coursename": "ECE 325",
-                "prereq":[
-                    {"coursename":"CMPUT 275"}
-                ]
-            },
-            {
-                "coursename":"ECE 340",
-                "prereq":[
-                    {"coursename":"ECE 240"}
-                ]
-            },
-            {
-                "coursename":"CH E 243",
-                "prereq":[
-                    {"coursename":"MATH 100"}  
-                ]
-            },
-            {
-                "coursename":"ENG M 310",
-                "prereq":[]
-            },
-            {
-                "coursename":"CMPUT 291",
-                "prereq":[
-                    {"coursename":"CMPUT 275"}
-                ]
-            },
-            {
-                "coursename":"CMPUT 379",
-                "prereq":[
-                    {"coursename":"CMPUT 275"},
-                    {"coursename":"ECE 212"}
-                ]
-            },
-            {
-                "coursename":"ECE 315",
-                "prereq":[
-                    {"coursename":"ECE 212"},
-                    {"coursename":"CMPUT 275"}
-                ]
-            },
-            {
-                "coursename":"ACCTG 300",
-                "prereq":[]
-            },
-            {
-                "coursename":"CMPUT 325",
-                "prereq":[
-                 {"coursename":"CMPUT 275"},
-                 {"coursename":"ECE 212"},
-                 {"coursename":"MATH 100"}   
-                ]
-            },
-            {
-                "coursename":"STS 200",
-                "prereq":[]
-            },
-            {
-                "coursename":"CMPUT 301",
-                "prereq":[
-                    {"coursename":"CMPUT 275"}
-                ]
-            },
-            {
-                "coursename":"ECE 304",
-                "prereq":[
-                    {"coursename":"ECE 210"},
-                    {"coursename":"ECE 302"}
-                ]
-            },
-            {
-                "coursename":"ECE 342",
-                "prereq":[
-                    {"coursename":"MATH 209"}
-                ]
-            },
-            {
-                "coursename":"ECE 410",
-                "prereq":[]
-            },
-            {
-                "coursename":"ENGG 404",
-                "prereq":[]
-            },
-            {
-                "coursename":"ECE 403",
-                "prereq":[
-                 {"coursename":"ECE 304"}   
-                ]
-            },
-            {
-                "coursename":"ECE 420",
-                "prereq":[
-                    {"coursename":"CMPUT 275"},
-                    {"coursename":"CMPUT 379"}
-                ]
-            },
-            {
-                "coursename":"ECE 487",
-                "prereq":[]
-            },
-            {
-                "coursename":"EC 492",
-                "prereq":[
-                 {"coursename":"ECE 315"},
-                 {"coursename":"ECE 410"}   
-                ]
-            },
-            {
-                "coursename":"ENGG 400",
-                "prereq":[]
-            },
-            {
-                "coursename":"MAT E 201",
-                "prereq":[
-                    {"coursename":"CHEM 105"}
-                ]
-            },
-            {
-                "coursename":"ECE 322",
-                "prereq":[
-                    {"coursename":"CMPUT 275"}
-                ]
-            }
-        ]
-                 
-    }
-}
+				},
+				{
+					"coursename": "ECE 202",
+					"prereq": [{
+							"coursename": "MATH 101"
+						},
+						{
+							"coursename": "MATH 102"
+						}
+					]
+				},
+				{
+					"coursename": "ECE 210",
+					"prereq": ""
+				},
+				{
+					"coursename": "MATH 201",
+					"prereq": [{
+						"coursename": "MATH 209"
+					}]
+				},
+				{
+					"coursename": "MATH 209",
+					"prereq": [{
+						"coursename": "MATH 201"
+					}]
+				},
+				{
+					"coursename": "ENGLISH ELECTIVE",
+					"prereq": ""
+
+				},
+				{
+					"coursename": "CMPUT 272",
+					"prereq": ""
+				},
+				{
+					"coursename": "CMPUT 275",
+					"prereq": [{
+						"coursename": "CMPUT 274"
+					}]
+				},
+				{
+					"coursename": "ECE 203",
+					"prereq": [{
+						"coursename": "ECE 202"
+					}]
+				},
+				{
+					"coursename": "ECE 212",
+					"prereq": [{
+						"coursename": "ECE 210"
+					}]
+				},
+				{
+					"coursename": "ECE 240",
+					"prereq": [{
+							"coursename": "ECE 202"
+						},
+						{
+							"coursename": "MATH 201"
+						}
+					]
+				},
+				{
+					"coursename": "PHYS 230",
+					"prereq": [{
+							"coursename": "MATH 100"
+						},
+						{
+							"coursename": "PHYS 130"
+						}
+					]
+				},
+				{
+					"coursename": "ECE 302",
+					"prereq": [{
+						"coursename": "ECE 203"
+					}]
+				},
+				{
+					"coursename": "ECE 311",
+					"prereq": [{
+						"coursename": "ECE 212"
+					}]
+				},
+				{
+					"coursename": "ECE 325",
+					"prereq": [{
+						"coursename": "CMPUT 275"
+					}]
+				},
+				{
+					"coursename": "ECE 340",
+					"prereq": [{
+						"coursename": "ECE 240"
+					}]
+				},
+				{
+					"coursename": "CH E 243",
+					"prereq": [{
+						"coursename": "MATH 100"
+					}]
+				},
+				{
+					"coursename": "ENG M 310",
+					"prereq": []
+				},
+				{
+					"coursename": "CMPUT 291",
+					"prereq": [{
+						"coursename": "CMPUT 275"
+					}]
+				},
+				{
+					"coursename": "CMPUT 379",
+					"prereq": [{
+							"coursename": "CMPUT 275"
+						},
+						{
+							"coursename": "ECE 212"
+						}
+					]
+				},
+				{
+					"coursename": "ECE 315",
+					"prereq": [{
+							"coursename": "ECE 212"
+						},
+						{
+							"coursename": "CMPUT 275"
+						}
+					]
+				},
+				{
+					"coursename": "ACCTG 300",
+					"prereq": []
+				},
+				{
+					"coursename": "CMPUT 325",
+					"prereq": [{
+							"coursename": "CMPUT 275"
+						},
+						{
+							"coursename": "ECE 212"
+						},
+						{
+							"coursename": "MATH 100"
+						}
+					]
+				},
+				{
+					"coursename": "STS 200",
+					"prereq": []
+				},
+				{
+					"coursename": "CMPUT 301",
+					"prereq": [{
+						"coursename": "CMPUT 275"
+					}]
+				},
+				{
+					"coursename": "ECE 304",
+					"prereq": [{
+							"coursename": "ECE 210"
+						},
+						{
+							"coursename": "ECE 302"
+						}
+					]
+				},
+				{
+					"coursename": "ECE 342",
+					"prereq": [{
+						"coursename": "MATH 209"
+					}]
+				},
+				{
+					"coursename": "ECE 410",
+					"prereq": []
+				},
+				{
+					"coursename": "ENGG 404",
+					"prereq": []
+				},
+				{
+					"coursename": "ECE 403",
+					"prereq": [{
+						"coursename": "ECE 304"
+					}]
+				},
+				{
+					"coursename": "ECE 420",
+					"prereq": [{
+							"coursename": "CMPUT 275"
+						},
+						{
+							"coursename": "CMPUT 379"
+						}
+					]
+				},
+				{
+					"coursename": "ECE 487",
+					"prereq": []
+				},
+				{
+					"coursename": "EC 492",
+					"prereq": [{
+							"coursename": "ECE 315"
+						},
+						{
+							"coursename": "ECE 410"
+						}
+					]
+				},
+				{
+					"coursename": "ENGG 400",
+					"prereq": []
+				},
+				{
+					"coursename": "MAT E 201",
+					"prereq": [{
+						"coursename": "CHEM 105"
+					}]
+				},
+				{
+					"coursename": "ECE 322",
+					"prereq": [{
+						"coursename": "CMPUT 275"
+					}]
+				}
+			]
+
+		}
+	}]
 }
