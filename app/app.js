@@ -57,3 +57,17 @@ function getAllDepartments(request, response) {
   }
   response.send(reply);
 }
+
+app.get('/search/courses/', getAllCourses);
+
+function getAllCourses(request, response) {
+  //TODO return all courses instaed of just data;
+  var reply;
+  var data = testdata;
+
+  reply = {
+    status: "found",
+    data: data
+  }
+  response.send(reply);
+}
