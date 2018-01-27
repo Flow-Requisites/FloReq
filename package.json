@@ -1,0 +1,22 @@
+{
+  "name": "floreq",
+  "version": "1.0.0",
+  "description": "Hackathon 2018 - FloReq",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flow-Requisites/FloReq.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flow-Requisites/FloReq/issues"
+  },
+  "homepage": "https://github.com/Flow-Requisites/FloReq#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
