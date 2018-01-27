@@ -1,5 +1,6 @@
 {
-    "COMPE":{
+    "Department":{
+        "COMPE":{
         "course":[
             {
                 "coursename": "CMPUT 274",
@@ -215,4 +216,5 @@
         ]
                  
     }
+}
 }
