@@ -1,18 +1,22 @@
-var testdata = { "department": [
-                {
-                  "name": "compe",
-                  "courses": [
-                    {
-                      "coursename" : "ECE 315",
-                      "prereq" : "ECE 212"
-                    },
-                    {
-                      "coursename" : "ECE 420",
-                      "prereq" : "CMPUT 379"
-                    }
-                  ]
-                }
-              ]};
+// var testdata = { "department": [
+//                 {
+//                   "name": "compe",
+//                   "courses": [
+//                     {
+//                       "coursename" : "ECE 315",
+//                       "prereq" : "ECE 212"
+//                     },
+//                     {
+//                       "coursename" : "ECE 420",
+//                       "prereq" : "CMPUT 379"
+//                     }
+//                   ]
+//                 }
+//               ]};
+// var fs = require('fs');
+// var testdata = fs.readFileSync('../data.json');
+var testdata = require('../data.json');
+console.log(testdata);
 
 console.log('Server is starting up');
 
