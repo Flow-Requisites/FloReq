@@ -34,7 +34,7 @@ function getDepartment(request, response) {
   if (testdata.department.some(item => item.name === department)) {
     reply = {
       status: "found",
-      data: testdata
+      data: testdata.department.find(item => item.name === department)
     }
   } else {
     reply = {
@@ -45,4 +45,15 @@ function getDepartment(request, response) {
 }
 
 
+app.get('/search/departments/', getAllDepartments);
 
+function getAllDepartments(request, response) {
+  var reply;
+  var data = testdata.department.map(value => value.name);
+
+  reply = {
+    status: "found",
+    data: data
+  }
+  response.send(reply);
+}
