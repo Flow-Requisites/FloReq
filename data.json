@@ -23,7 +23,7 @@
       },
       {
         "coursename": "ECE 210",
-        "prereq": ""
+        "prereq": []
       },
       {
         "coursename": "MATH 201",
@@ -39,12 +39,12 @@
       },
       {
         "coursename": "ENGLISH ELECTIVE",
-        "prereq": ""
+        "prereq": []
 
       },
       {
         "coursename": "CMPUT 272",
-        "prereq": ""
+        "prereq": []
       },
       {
         "coursename": "CMPUT 275",
