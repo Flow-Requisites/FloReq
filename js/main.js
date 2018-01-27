@@ -14,18 +14,19 @@ $(function () {
   var diagonal = d3.svg.diagonal()
       .projection(function(d) { return [d.y, d.x]; });
 
-  var svg = d3.select("body").append("svg")
-      .attr("width", width + margin.right + margin.left)
-      .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.right + margin.left)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.json("../data/flare.json", function(error, flare) {
-    if (error) throw error;
 
-    root = flare;
-    root.x0 = height / 2;
-    root.y0 = 0;
+d3.json("../data.json", function(error, flare) {
+  if (error) throw error;
+
+  root = flare.COMPE;
+  root.x0 = height / 2;
+  root.y0 = 0;
 
     function collapse(d) {
       if (d.children) {
