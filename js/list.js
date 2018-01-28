@@ -45,14 +45,26 @@ $( document ).ready(function () {
     }
 
     function showInfo(course) {
+        $('.course-info-title').remove();
+        $('.course-info-name').remove();
+        $('.course-info-desc').remove();
         course.css('background-color', '#ddd');
         courses.forEach(function(d) {
             if (d.name == course[0].innerText) {
                 d.children.forEach(function(d) {
-                    console.log(d.name);
                     $('li:contains('+ d.name + ')').css('background-color', 'rgba(255,0,0,0.6)');
                 });
             }
+        });
+
+        
+        d3.json("../data2.json", function(error, data2) {
+            data2.courses.forEach(function(d){ if (d.abrev == course[0].innerText) {
+                var info = $('.course-info'),
+                    infoTitle = info.append($('<p class="course-info-title"/>').text(d.abrev));
+                    infoName = info.append($('<p class="course-info-name"/>').text(d.name));
+                    infoDesc = info.append($('<p class="course-info-desc"/>').text(d.detail));
+            }});
         });
     }
 
