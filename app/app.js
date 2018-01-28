@@ -105,12 +105,39 @@ function getAllCourses(req, res) {
 app.get('/search/course/', getCourse);
 
 function getCourse(req, res) {
-    db.collection(COURSE_COLLECTION).findOne({name: req.query.name}, function(err, doc) {
+    var ObjectID = require('mongodb').ObjectID;
+    var objId = new ObjectID(req.query._id);
+    db.collection(COURSE_COLLECTION).findOne({_id: objId}, function(err, doc) {
       if (err) {
-        handleError(res, err.message, "Failed to get course.");
+        console.log('failed id');
+        handleError(res, err.message, "Failed to get id");
         return;
       } else {
-        res.status(200).json(doc);
+        if (doc != null){
+          console.log('success id');
+          res.status(200).json(doc);
+        }
+        else{
+          console.log('failed id');
+          db.collection(COURSE_COLLECTION).findOne({abbr: req.query.abbr}, function(err1, doc1) {
+            if (err1) {
+              console.log('failed abbr');
+              handleError(res, err.message, "Failed to get abbr. ");
+              return;
+            }
+            else{
+              if("doc1 != null"){
+                console.log('success abbr');
+                res.status(200).json(doc1);
+              }
+              else{
+                console.log('failed abbr');
+                // res.status(404).json(doc1);
+              }
+            }
+          });
+        }
+
       }
     });
 }
@@ -118,27 +145,81 @@ function getCourse(req, res) {
 app.get('/search/department/', getDepartment);
 
 function getDepartment(req, res) {
-    db.collection(DEPARTMENT_COLLECTION).findOne({name: req.query.name}, function(err, doc) {
-      if (err) {
-        handleError(res, err.message, "Failed to get department.");
-        return;
-      } else {
+  var ObjectID = require('mongodb').ObjectID;
+  var objId = new ObjectID(req.query._id);
+  db.collection(DEPARTMENT_COLLECTION).findOne({_id: objId}, function(err, doc) {
+    if (err) {
+      console.log('error id');
+      handleError(res, err.message, "Error to get id");
+      return;
+    } else {
+      if (doc != null){
+        console.log('success id');
         res.status(200).json(doc);
       }
-    });
+      else{
+        console.log('failed id');
+        db.collection(DEPARTMENT_COLLECTION).findOne({name: req.query.name}, function(err1, doc1) {
+          if (err1) {
+            console.log('failed name');
+            handleError(res, err.message, "Error to get name. ");
+            return;
+          }
+          else{
+            if("doc1 != null"){
+              console.log('success name');
+              res.status(200).json(doc1);
+            }
+            else{
+              console.log('failed name');
+              // res.status(404).json(doc1);
+            }
+          }
+        });
+      }
+
+    }
+  });
 }
 
 app.get('/search/specialization/', getSpecialization);
 
 function getSpecialization(req, res) {
-    db.collection(SPECIALIZATION_COLLECTION).findOne({name: req.query.name}, function(err, doc) {
-      if (err) {
-        handleError(res, err.message, "Failed to get specialization.");
-        return;
-      } else {
+  var ObjectID = require('mongodb').ObjectID;
+  var objId = new ObjectID(req.query._id);
+  db.collection(SPECIALIZATION_COLLECTION).findOne({_id: objId}, function(err, doc) {
+    if (err) {
+      console.log('error id');
+      handleError(res, err.message, "Error to get id");
+      return;
+    } else {
+      if (doc != null){
+        console.log('success id');
         res.status(200).json(doc);
       }
-    });
+      else{
+        console.log('failed id');
+        db.collection(SPECIALIZATION_COLLECTION).findOne({name: req.query.name}, function(err1, doc1) {
+          if (err1) {
+            console.log('failed name');
+            handleError(res, err.message, "Error to get name. ");
+            return;
+          }
+          else{
+            if("doc1 != null"){
+              console.log('success name');
+              res.status(200).json(doc1);
+            }
+            else{
+              console.log('failed name');
+              // res.status(404).json(doc1);
+            }
+          }
+        });
+      }
+
+    }
+  });
 }
 
 app.post('/insert/department/', insertDepartment);
