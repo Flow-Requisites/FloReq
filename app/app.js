@@ -1,24 +1,4 @@
-// var testdata = { "department": [
-//                 {
-//                   "name": "compe",
-//                   "courses": [
-//                     {
-//                       "coursename" : "ECE 315",
-//                       "prereq" : "ECE 212"
-//                     },
-//                     {
-//                       "coursename" : "ECE 420",
-//                       "prereq" : "CMPUT 379"
-//                     }
-//                   ]
-//                 }
-//               ]};
-// var fs = require('fs');
-// var testdata = fs.readFileSync('../data.json');
 var testdata = require('../data.json');
-console.log(testdata);
-
-console.log('Server is starting up');
 
 var express = require('express');
 var app = express();
@@ -28,26 +8,37 @@ function listening() {
   console.log('listening ...');
 }
 
-app.get('/search/:department/:specialization/', getDepartment);
+app.get('/search/department/', getPreReqs);
 
-function getDepartment(request, response) {
-  var department = request.params.department;
-  var specialization = request.params.specialization;
+function getPreReqs(request, response) {
+  var department = request.query.name;
+  var specialization = request.query.spec;
   var reply;
 
   if (testdata.department.some(item => item.name === department)) {
-    reply = {
-      status: "found",
-      data: testdata.department.find(item => item.name === department)
+    var tmp = testdata.department.find(item => item.name == department);
+    tmp = tmp.specialization.find(item => item.name === specialization);
+    if (tmp) {
+      reply = {
+        status: "found",
+        department: department,
+        data: tmp
+      }
     }
-  } else {
+    else {
+      reply = {
+        status: "specialization not found",
+        department: department
+      }
+    }
+  }
+  else {
     reply = {
-      status: "department cannot be found"
+      status: "department not found"
     }
   }
   response.send(reply);
 }
-
 
 app.get('/search/departments/', getAllDepartments);
 
@@ -74,4 +65,11 @@ function getAllCourses(request, response) {
     data: data
   }
   response.send(reply);
+}
+
+app.get('/search/course/:coursename', getCourse);
+
+function getCourse(request, response) {
+  var reply;
+  var course = request.params.coursename;
 }
