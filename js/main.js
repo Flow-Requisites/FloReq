@@ -25,7 +25,7 @@ $(function () {
     var treemap = d3.tree().size([height, width]);
 
     // Assigns parent, children, height, depth
-    root = d3.hierarchy(flare.department[0], function(d) { return d.children; });
+    root = d3.hierarchy(flare.department[0].specialization[0], function(d) { return d.children; });
     root.x0 = height / 2;
     root.y0 = 0;
 
