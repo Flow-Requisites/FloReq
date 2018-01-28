@@ -3,245 +3,282 @@
     "name": "compe",
     "specialization": [{
       "name": "trad",
-      "courses": [{
-          "coursename": "CMPUT 274",
-          "prereq": []
+      "children": [{
+          "name": "CMPUT 274",
+          "children": [],
+          "term": 2
 
         },
         {
-          "coursename": "ECE 201",
-          "prereq": []
+          "name": "ECE 201",
+          "children": [],
+          "term": 2
 
         },
         {
-          "coursename": "ECE 202",
-          "prereq": [{
-              "coursename": "MATH 101"
+          "name": "ECE 202",
+          "children": [{
+              "name": "MATH 101"
             },
             {
-              "coursename": "MATH 102"
+              "name": "MATH 102"
             }
-          ]
+          ],
+          "term": 2
         },
         {
-          "coursename": "ECE 210",
-          "prereq": []
+          "name": "ECE 210",
+          "children": [],
+          "term": 2
         },
         {
-          "coursename": "MATH 201",
-          "prereq": [{
-            "coursename": "MATH 209"
-          }]
+          "name": "MATH 201",
+          "children": [{
+            "name": "MATH 209"
+          }],
+          "term": 2
         },
         {
-          "coursename": "MATH 209",
-          "prereq": [{
-            "coursename": "MATH 201"
-          }]
+          "name": "MATH 209",
+          "children": [{
+            "name": "MATH 201"
+          }],
+          "term": 2
         },
         {
-          "coursename": "ENGLISH ELECTIVE",
-          "prereq": []
+          "name": "ENGLISH ELECTIVE",
+          "children": [],
+          "term": 2
 
         },
         {
-          "coursename": "CMPUT 272",
-          "prereq": []
+          "name": "CMPUT 272",
+          "children": [],
+          "term": 3
         },
         {
-          "coursename": "CMPUT 275",
-          "prereq": [{
-            "coursename": "CMPUT 274"
-          }]
+          "name": "CMPUT 275",
+          "children": [{
+            "name": "CMPUT 274"
+          }],
+          "term": 3
         },
         {
-          "coursename": "ECE 203",
-          "prereq": [{
-            "coursename": "ECE 202"
-          }]
+          "name": "ECE 203",
+          "children": [{
+            "name": "ECE 202"
+          }],
+          "term": 3
         },
         {
-          "coursename": "ECE 212",
-          "prereq": [{
-            "coursename": "ECE 210"
-          }]
+          "name": "ECE 212",
+          "children": [{
+            "name": "ECE 210"
+          }],
+          "term": 3
         },
         {
-          "coursename": "ECE 240",
-          "prereq": [{
-              "coursename": "ECE 202"
+          "name": "ECE 240",
+          "children": [{
+              "name": "ECE 202"
             },
             {
-              "coursename": "MATH 201"
+              "name": "MATH 201"
             }
-          ]
+          ],
+          "term": 3
         },
         {
-          "coursename": "PHYS 230",
-          "prereq": [{
-              "coursename": "MATH 100"
+          "name": "PHYS 230",
+          "children": [{
+              "name": "MATH 100"
             },
             {
-              "coursename": "PHYS 130"
+              "name": "PHYS 130"
             }
-          ]
+          ],
+          "term": 3
         },
         {
-          "coursename": "ECE 302",
-          "prereq": [{
-            "coursename": "ECE 203"
-          }]
+          "name": "ECE 302",
+          "children": [{
+            "name": "ECE 203"
+          }],
+          "term": 4
         },
         {
-          "coursename": "ECE 311",
-          "prereq": [{
-            "coursename": "ECE 212"
-          }]
+          "name": "ECE 311",
+          "children": [{
+            "name": "ECE 212"
+          }],
+          "term": 4
         },
         {
-          "coursename": "ECE 325",
-          "prereq": [{
-            "coursename": "CMPUT 275"
-          }]
+          "name": "ECE 325",
+          "children": [{
+            "name": "CMPUT 275"
+          }],
+          "term": 4
         },
         {
-          "coursename": "ECE 340",
-          "prereq": [{
-            "coursename": "ECE 240"
-          }]
+          "name": "ECE 340",
+          "children": [{
+            "name": "ECE 240"
+          }],
+          "term": 4
         },
         {
-          "coursename": "CH E 243",
-          "prereq": [{
-            "coursename": "MATH 100"
-          }]
+          "name": "CH E 243",
+          "children": [{
+            "name": "MATH 100"
+          }],
+          "term": 4
         },
         {
-          "coursename": "ENG M 310",
-          "prereq": []
+          "name": "ENG M 310",
+          "children": [],
+          "term": 4
         },
         {
-          "coursename": "CMPUT 291",
-          "prereq": [{
-            "coursename": "CMPUT 275"
-          }]
+          "name": "CMPUT 291",
+          "children": [{
+            "name": "CMPUT 275"
+          }],
+          "term": 5
         },
         {
-          "coursename": "CMPUT 379",
-          "prereq": [{
-              "coursename": "CMPUT 275"
+          "name": "CMPUT 379",
+          "children": [{
+              "name": "CMPUT 275"
             },
             {
-              "coursename": "ECE 212"
+              "name": "ECE 212"
             }
-          ]
+          ],
+          "term": 5
         },
         {
-          "coursename": "ECE 315",
-          "prereq": [{
-              "coursename": "ECE 212"
+          "name": "ECE 315",
+          "children": [{
+              "name": "ECE 212"
             },
             {
-              "coursename": "CMPUT 275"
+              "name": "CMPUT 275"
             }
-          ]
+          ],
+          "term": 5
         },
         {
-          "coursename": "ACCTG 300",
-          "prereq": []
+          "name": "ACCTG 300",
+          "children": [],
+          "term": 5
         },
         {
-          "coursename": "CMPUT 325",
-          "prereq": [{
-              "coursename": "CMPUT 275"
+          "name": "CMPUT 325",
+          "children": [{
+              "name": "CMPUT 275"
             },
             {
-              "coursename": "ECE 212"
+              "name": "ECE 212"
             },
             {
-              "coursename": "MATH 100"
+              "name": "MATH 100"
             }
-          ]
+          ],
+          "term": 5
         },
         {
-          "coursename": "STS 200",
-          "prereq": []
+          "name": "STS 200",
+          "children": [],
+          "term": 5
         },
         {
-          "coursename": "CMPUT 301",
-          "prereq": [{
-            "coursename": "CMPUT 275"
-          }]
+          "name": "CMPUT 301",
+          "children": [{
+            "name": "CMPUT 275"
+          }],
+          "term": 6
         },
         {
-          "coursename": "ECE 304",
-          "prereq": [{
-              "coursename": "ECE 210"
+          "name": "ECE 304",
+          "children": [{
+              "name": "ECE 210"
             },
             {
-              "coursename": "ECE 302"
+              "name": "ECE 302"
             }
-          ]
+          ],
+          "term": 6
         },
         {
-          "coursename": "ECE 342",
-          "prereq": [{
-            "coursename": "MATH 209"
-          }]
+          "name": "ECE 342",
+          "children": [{
+            "name": "MATH 209"
+          }],
+          "term": 6
         },
         {
-          "coursename": "ECE 410",
-          "prereq": []
+          "name": "ECE 410",
+          "children": [],
+          "term": 6
         },
         {
-          "coursename": "ENGG 404",
-          "prereq": []
+          "name": "ENGG 404",
+          "children": [],
+          "term": 6
         },
         {
-          "coursename": "ECE 403",
-          "prereq": [{
-            "coursename": "ECE 304"
-          }]
+          "name": "ECE 403",
+          "children": [{
+            "name": "ECE 304"
+          }],
+          "term": 6
         },
         {
-          "coursename": "ECE 420",
-          "prereq": [{
-              "coursename": "CMPUT 275"
+          "name": "ECE 420",
+          "children": [{
+              "name": "CMPUT 275"
             },
             {
-              "coursename": "CMPUT 379"
+              "name": "CMPUT 379"
             }
-          ]
+          ],
+          "term": 7
         },
         {
-          "coursename": "ECE 487",
-          "prereq": []
+          "name": "ECE 487",
+          "children": [],
+          "term": 7
         },
         {
-          "coursename": "EC 492",
-          "prereq": [{
-              "coursename": "ECE 315"
+          "name": "EC 492",
+          "children": [{
+              "name": "ECE 315"
             },
             {
-              "coursename": "ECE 410"
+              "name": "ECE 410"
             }
-          ]
+          ],
+          "term": 7
         },
         {
-          "coursename": "ENGG 400",
-          "prereq": []
+          "name": "ENGG 400",
+          "children": [],
+          "term": 7
         },
         {
-          "coursename": "MAT E 201",
-          "prereq": [{
-            "coursename": "CHEM 105"
-          }]
+          "name": "MAT E 201",
+          "children": [{
+            "name": "CHEM 105"
+          }],
+          "term": 7
         },
         {
-          "coursename": "ECE 322",
-          "prereq": [{
-            "coursename": "CMPUT 275"
-          }]
+          "name": "ECE 322",
+          "children": [{
+            "name": "CMPUT 275"
+          }],
+          "term": 7
         }
       ]
 
