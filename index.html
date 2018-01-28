@@ -9,33 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>FloReq</title>
-  </head>
-  <body>
-    
-
-    <div class="grid">
-    <header>
-        <h1>Hello, world!</h1>
-    </header>
-
-    <aside class="sidebar-left">
-    Left Sidebar
-    </aside>
-
-    <article>
-    Article
-    </article>
-
-    <aside class="sidebar-right">
-    Right Sidebar
-    </aside>
-    
-    <footer>
-    Footer
-    </footer>
-    </div>
-    
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -44,6 +18,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="//d3js.org/d3.v4.min.js"></script>
     <script src="js/main.js"></script>
-    </body>
+
+  <title>FloReq</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="box header">Flow Requisites</div>
+        <div class="box nav-bar" id="nav-placeholder"></div>
+        <div class="box sidebar">
+            <input id="uni-input" list="uni" placeholder="Select University" type="text" multiple>
+            <datalist id="uni">
+                <option value="University of Alberta">
+            </datalist>
+            <input id="prog-input" list="prog" placeholder="Select Program" type="text" multiple>
+            <datalist id="prog">
+                <option value="Computer Traditional">
+            </datalist>
+            <p id="title">Courses Needed</p>
+        </div>
+        <div class="box content"></div>
+        <div class="box footer">Presented by the VR Team.</div>
+    </div>
+  </body>
 </html>
+
 

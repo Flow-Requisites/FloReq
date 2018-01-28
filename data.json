@@ -1,287 +1,739 @@
 {
-  "department": [{
-    "name": "compe",
-    "specialization": [{
-      "name": "trad",
-      "children": [{
-          "name": "CMPUT 274",
-          "children": [],
-          "term": 2
+	"department": [{
+		"name": "compe",
+		"specialization": [{
+			"name": "trad",
+			"children": [{
+					"name": "CHEM 103",
+					"children": [],
+					"term": 0
+				},
+				{
+					"name": "ENGG 100",
+					"children": [],
+					"term": 0
+				},
+				{
+					"name": "MATH 100",
+					"children": [],
+					"term": 0
+				},
+				{
+					"name": "PHYS 130",
+					"children": [],
+					"term": 0
+				},
+				{
+					"name": "ECON 101",
+					"children": [],
+					"term": 0
+				},
+				{
+					"name": "ENGG 130",
+					"children": [],
+					"term": 0
+				},
+				{
+					"name": "CHEM 105",
+					"children": [{
+						"name": "CHEM 103"
+					}],
+					"term": 1
+				},
+				{
+					"name": "ENCMP 100",
+					"children": [],
+					"term": 1
+				},
+				{
+					"name": "ENGG 101",
+					"children": [],
+					"term": 1
+				},
+				{
+					"name": "EN PH 131",
+					"children": [{
+							"name": "ENGG 130"
+						},
+						{
+							"name": "MATH 100"
+						}
+					],
+					"term": 1
+				},
+				{
+					"name": "MATH 101",
+					"children": [{
+						"name": "MATH 100"
+					}],
+					"term": 1
+				},
+				{
+					"name": "MATH 102",
+					"children": [{
+						"name": "MATH 100"
+					}],
+					"term": 1
+				},
+				{
+					"name": "CMPUT 274",
+					"children": [],
+					"term": 2
 
-        },
-        {
-          "name": "ECE 201",
-          "children": [],
-          "term": 2
+				},
+				{
+					"name": "ECE 201",
+					"children": [],
+					"term": 2
 
-        },
-        {
-          "name": "ECE 202",
-          "children": [{
-              "name": "MATH 101"
-            },
-            {
-              "name": "MATH 102"
-            }
-          ],
-          "term": 2
-        },
-        {
-          "name": "ECE 210",
-          "children": [],
-          "term": 2
-        },
-        {
-          "name": "MATH 201",
-          "children": [{
+				},
+				{
+					"name": "ECE 202",
+					"children": [{
+							"name": "MATH 101"
+						},
+						{
+							"name": "MATH 102"
+						}
+					],
+					"term": 2
+				},
+				{
+					"name": "ECE 210",
+					"children": [],
+					"term": 2
+				},
+				{
+					"name": "MATH 201",
+					"children": [{
+						"name": "MATH 209"
+					}],
+					"term": 2
+				},
+				{
+					"name": "MATH 209",
+					"children": [{
+						"name": "MATH 201"
+					}],
+					"term": 2
+				},
+				{
+					"name": "English",
+					"children": [],
+					"term": 2
+
+				},
+				{
+					"name": "CMPUT 272",
+					"children": [],
+					"term": 3
+				},
+				{
+					"name": "CMPUT 275",
+					"children": [{
+						"name": "CMPUT 274"
+					}],
+					"term": 3
+				},
+				{
+					"name": "ECE 203",
+					"children": [{
+						"name": "ECE 202"
+					}],
+					"term": 3
+				},
+				{
+					"name": "ECE 212",
+					"children": [{
+						"name": "ECE 210"
+					}],
+					"term": 3
+				},
+				{
+					"name": "ECE 240",
+					"children": [{
+							"name": "ECE 202"
+						},
+						{
+							"name": "MATH 201"
+						}
+					],
+					"term": 3
+				},
+				{
+					"name": "PHYS 230",
+					"children": [{
+							"name": "MATH 100"
+						},
+						{
+							"name": "PHYS 130"
+						}
+					],
+					"term": 3
+				},
+				{
+					"name": "ECE 302",
+					"children": [{
+						"name": "ECE 203"
+					}],
+					"term": 4
+				},
+				{
+					"name": "ECE 311",
+					"children": [{
+						"name": "ECE 212"
+					}],
+					"term": 4
+				},
+				{
+					"name": "ECE 325",
+					"children": [{
+						"name": "CMPUT 275"
+					}],
+					"term": 4
+				},
+				{
+					"name": "ECE 340",
+					"children": [{
+						"name": "ECE 240"
+					}],
+					"term": 4
+				},
+				{
+					"name": "CH E 243",
+					"children": [{
+						"name": "MATH 100"
+					}],
+					"term": 4
+				},
+				{
+					"name": "ENG M 310",
+					"children": [],
+					"term": 4
+				},
+				{
+					"name": "CMPUT 291",
+					"children": [{
+						"name": "CMPUT 275"
+					}],
+					"term": 5
+				},
+				{
+					"name": "CMPUT 379",
+					"children": [{
+							"name": "CMPUT 275"
+						},
+						{
+							"name": "ECE 212"
+						}
+					],
+					"term": 5
+				},
+				{
+					"name": "ECE 315",
+					"children": [{
+							"name": "ECE 212"
+						},
+						{
+							"name": "CMPUT 275"
+						}
+					],
+					"term": 5
+				},
+				{
+					"name": "ACCTG 300",
+					"children": [],
+					"term": 5
+				},
+				{
+					"name": "CMPUT 325",
+					"children": [{
+							"name": "CMPUT 275"
+						},
+						{
+							"name": "ECE 212"
+						},
+						{
+							"name": "MATH 100"
+						}
+					],
+					"term": 5
+				},
+				{
+					"name": "STS 200",
+					"children": [],
+					"term": 5
+				},
+				{
+					"name": "CMPUT 301",
+					"children": [{
+						"name": "CMPUT 275"
+					}],
+					"term": 6
+				},
+				{
+					"name": "ECE 304",
+					"children": [{
+							"name": "ECE 210"
+						},
+						{
+							"name": "ECE 302"
+						}
+					],
+					"term": 6
+				},
+				{
+					"name": "ECE 342",
+					"children": [{
+						"name": "MATH 209"
+					}],
+					"term": 6
+				},
+				{
+					"name": "ECE 410",
+					"children": [],
+					"term": 6
+				},
+				{
+					"name": "ENGG 404",
+					"children": [],
+					"term": 6
+				},
+				{
+					"name": "ECE 403",
+					"children": [{
+						"name": "ECE 304"
+					}],
+					"term": 6
+				},
+				{
+					"name": "ECE 420",
+					"children": [{
+							"name": "CMPUT 275"
+						},
+						{
+							"name": "CMPUT 379"
+						}
+					],
+					"term": 7
+				},
+				{
+					"name": "ECE 487",
+					"children": [],
+					"term": 7
+				},
+				{
+					"name": "ECE 492",
+					"children": [{
+							"name": "ECE 315"
+						},
+						{
+							"name": "ECE 410"
+						}
+					],
+					"term": 7
+				},
+				{
+					"name": "ENGG 400",
+					"children": [],
+					"term": 7
+				},
+				{
+					"name": "MAT E 201",
+					"children": [{
+						"name": "CHEM 105"
+					}],
+					"term": 7
+				},
+				{
+					"name": "ECE 322",
+					"children": [{
+						"name": "CMPUT 275"
+					}],
+					"term": 7
+				}
+			]
+
+    }]
+  },
+  {
+  "name": "ee",
+  "specialization": [{
+    "name": "trad",
+    "children": [{
+        "name": "CHEM 103",
+        "children": [],
+        "term": 0
+      },
+      {
+        "name": "ENGG 100",
+        "children": [],
+        "term": 0
+      },
+      {
+        "name": "MATH 100",
+        "children": [],
+        "term": 0
+      },
+      {
+        "name": "PHYS 130",
+        "children": [],
+        "term": 0
+      },
+      {
+        "name": "ECON 101",
+        "children": [],
+        "term": 0
+      },
+      {
+        "name": "ENGG 130",
+        "children": [],
+        "term": 0
+      },
+      {
+        "name": "CHEM 105",
+        "children": [{
+          "name": "CHEM 103"
+        }],
+        "term": 1
+      },
+      {
+        "name": "ENCMP 100",
+        "children": [],
+        "term": 1
+      },
+      {
+        "name": "ENGG 101",
+        "children": [],
+        "term": 1
+      },
+      {
+        "name": "EN PH 131",
+        "children": [{
+            "name": "ENGG 130"
+          },
+          {
+            "name": "MATH 100"
+          }
+        ],
+        "term": 1
+      },
+      {
+        "name": "MATH 101",
+        "children": [{
+          "name": "MATH 100"
+        }],
+        "term": 1
+      },
+      {
+        "name": "MATH 102",
+        "children": [{
+          "name": "MATH 100"
+        }],
+        "term": 1
+      },
+      {
+        "name": "ECE 201",
+        "children": [],
+        "term": 2
+
+      },
+      {
+        "name": "ECE 202",
+        "children": [{
+            "name": "MATH 101"
+          },
+          {
+            "name": "MATH 102"
+          }
+        ],
+        "term": 2
+
+      },
+      {
+        "name": "ECE 210",
+        "children": [],
+        "term": 2
+      },
+      {
+        "name": "MATH 201",
+        "children": [{
             "name": "MATH 209"
           }],
-          "term": 2
-        },
-        {
-          "name": "MATH 209",
-          "children": [{
-            "name": "MATH 201"
+        "term": 2
+      },
+      {
+        "name": "MATH 209",
+        "children": [{
+            "name": "MATH 101"
+          },
+          {
+            "name": "MATH 102"
           }],
-          "term": 2
-        },
-        {
-          "name": "ENGLISH ELECTIVE",
-          "children": [],
-          "term": 2
+        "term": 2
+      },
+      {
+        "name": "MAT E 201",
+        "children": [],
+        "term": 2
+      },
+      {
+        "name": "English",
+        "children": [],
+        "term": 2
 
-        },
-        {
-          "name": "CMPUT 272",
-          "children": [],
-          "term": 3
-        },
-        {
-          "name": "CMPUT 275",
-          "children": [{
-            "name": "CMPUT 274"
-          }],
-          "term": 3
-        },
-        {
-          "name": "ECE 203",
-          "children": [{
+      },
+      {
+        "name": "ECE 203",
+        "children": [{
             "name": "ECE 202"
           }],
-          "term": 3
-        },
-        {
-          "name": "ECE 212",
-          "children": [{
-            "name": "ECE 210"
-          }],
-          "term": 3
-        },
-        {
-          "name": "ECE 240",
-          "children": [{
-              "name": "ECE 202"
-            },
-            {
+        "term": 3
+      },
+      {
+        "name": "ECE 212",
+        "children": [{
+          "name": "ECE 210"
+        }],
+        "term": 3
+      },
+      {
+        "name": "ECE 220",
+        "children": [{
+          "name": "ECE 220"
+        }],
+        "term": 3
+      },
+      {
+        "name": "ECE 240",
+        "children": [{
+            "name": "ECE 202"
+          },
+          {
               "name": "MATH 201"
             }
           ],
-          "term": 3
-        },
-        {
-          "name": "PHYS 230",
-          "children": [{
-              "name": "MATH 100"
-            },
-            {
-              "name": "PHYS 130"
-            }
-          ],
-          "term": 3
-        },
-        {
-          "name": "ECE 302",
-          "children": [{
-            "name": "ECE 203"
-          }],
-          "term": 4
-        },
-        {
-          "name": "ECE 311",
-          "children": [{
-            "name": "ECE 212"
-          }],
-          "term": 4
-        },
-        {
-          "name": "ECE 325",
-          "children": [{
-            "name": "CMPUT 275"
-          }],
-          "term": 4
-        },
-        {
-          "name": "ECE 340",
-          "children": [{
-            "name": "ECE 240"
-          }],
-          "term": 4
-        },
-        {
-          "name": "CH E 243",
-          "children": [{
+        "term": 3
+      },
+      {
+        "name": "PHYS 230",
+        "children": [{
+            "name": "PHYS 130"
+          },
+          {
             "name": "MATH 100"
-          }],
-          "term": 4
-        },
-        {
-          "name": "ENG M 310",
-          "children": [],
-          "term": 4
-        },
-        {
-          "name": "CMPUT 291",
-          "children": [{
-            "name": "CMPUT 275"
-          }],
-          "term": 5
-        },
-        {
-          "name": "CMPUT 379",
-          "children": [{
-              "name": "CMPUT 275"
-            },
-            {
-              "name": "ECE 212"
-            }
-          ],
-          "term": 5
-        },
-        {
-          "name": "ECE 315",
-          "children": [{
-              "name": "ECE 212"
-            },
-            {
-              "name": "CMPUT 275"
-            }
-          ],
-          "term": 5
-        },
-        {
-          "name": "ACCTG 300",
-          "children": [],
-          "term": 5
-        },
-        {
-          "name": "CMPUT 325",
-          "children": [{
-              "name": "CMPUT 275"
-            },
-            {
-              "name": "ECE 212"
-            },
-            {
-              "name": "MATH 100"
-            }
-          ],
-          "term": 5
-        },
-        {
-          "name": "STS 200",
-          "children": [],
-          "term": 5
-        },
-        {
-          "name": "CMPUT 301",
-          "children": [{
-            "name": "CMPUT 275"
-          }],
-          "term": 6
-        },
-        {
-          "name": "ECE 304",
-          "children": [{
-              "name": "ECE 210"
-            },
-            {
-              "name": "ECE 302"
-            }
-          ],
-          "term": 6
-        },
-        {
-          "name": "ECE 342",
-          "children": [{
-            "name": "MATH 209"
-          }],
-          "term": 6
-        },
-        {
-          "name": "ECE 410",
-          "children": [],
-          "term": 6
-        },
-        {
-          "name": "ENGG 404",
-          "children": [],
-          "term": 6
-        },
-        {
-          "name": "ECE 403",
-          "children": [{
-            "name": "ECE 304"
-          }],
-          "term": 6
-        },
-        {
-          "name": "ECE 420",
-          "children": [{
-              "name": "CMPUT 275"
-            },
-            {
-              "name": "CMPUT 379"
-            }
-          ],
-          "term": 7
-        },
-        {
-          "name": "ECE 487",
-          "children": [],
-          "term": 7
-        },
-        {
-          "name": "EC 492",
-          "children": [{
-              "name": "ECE 315"
-            },
-            {
-              "name": "ECE 410"
-            }
-          ],
-          "term": 7
-        },
-        {
-          "name": "ENGG 400",
-          "children": [],
-          "term": 7
-        },
-        {
-          "name": "MAT E 201",
-          "children": [{
-            "name": "CHEM 105"
-          }],
-          "term": 7
-        },
-        {
-          "name": "ECE 322",
-          "children": [{
-            "name": "CMPUT 275"
-          }],
-          "term": 7
+          }
+        ],
+        "term": 3
+      },
+      {
+        "name": "ACCTG 300",
+        "children": [],
+        "term": 3
+      },
+      {
+        "name": "ECE 302",
+        "children": [{
+          "name": "ECE 203"
+        }],
+        "term": 4
+      },
+      {
+        "name": "ECE 340",
+        "children": [{
+          "name": "ECE 240"
+        }],
+        "term": 4
+      },
+      {
+        "name": "ECE 342",
+        "children": [{
+          "name": "MATH 209"
         }
-      ]
-
-    }]
+        ],
+        "term": 4
+      },
+      {
+        "name": "ECE 360",
+        "children": [{
+          "name": "ECE 203"
+        },
+        {
+            "name": "ECE 240"
+        }
+        ],
+        "term": 4
+      },
+      {
+        "name": "ECE 370",
+        "children": [{
+          "name": "MATH 102"
+        },
+        {
+          "name": "MATH 209"
+        },
+        {
+          "name": "PHYS 230"
+        }],
+        "term": 4
+      },
+      {
+        "name": "MATH 309",
+        "children": [
+        {
+          "name": "MATH 209"
+        }
+        ],
+        "term": 4
+      },
+      {
+        "name": "ECE 303",
+        "children": [{
+          "name": "ECE 302"
+        }],
+        "term": 5
+      },
+      {
+        "name": "ECE 312",
+        "children": [{
+            "name": "ECE 220"
+          },
+          {
+            "name": "ECE 212"
+          }
+        ],
+        "term": 5
+      },
+      {
+        "name": "ECE 330",
+        "children": [{
+            "name": "ECE 203"
+          },
+          {
+            "name": "CMPUT 275"
+          }
+        ],
+        "term": 5
+      },
+      {
+        "name": "ECE 380",
+        "children": [
+          {
+            "name": "ECE 240"
+          }
+        ],
+        "term": 5
+      },
+      {
+        "name": "ECE 304",
+        "children": [
+          {
+            "name": "ECE 210"
+          }
+        ],
+        "term": 5
+      },
+      {
+        "name": "ECE 332",
+        "children": [
+          {
+            "name": "ECE 330"
+          }
+        ],
+        "term": 6
+      },
+      {
+        "name": "ECE 490",
+        "children": [{
+          "name": "ECE 312"
+        }],
+        "term": 6
+      },
+      {
+        "name": "ENGG 404",
+        "children": [],
+        "term": 6
+      },
+      {
+        "name": "CH E 243",
+        "children": [],
+        "term": 6
+      },
+      {
+        "name": "ECE 401",
+        "children": [
+          {
+            "name": "ECE 303"
+          },
+          {
+            "name": "ECE 360"
+          }
+        ],
+        "term": 6
+      },
+      {
+        "name": "ECE 402",
+        "children": [
+          {
+            "name": "ECE 302"
+          }
+        ],
+        "term": 6
+      },
+      {
+        "name": "ECE 491",
+        "children": [{
+          "name": "ECE 490"
+        },
+        {
+          "name": "ECE 303"
+        }
+      ],
+        "term": 7
+      },
+      {
+        "name": "ENG M 310",
+        "children": [],
+        "term": 7
+      },
+      {
+        "name": "ENGG 400",
+        "children": [],
+        "term": 7
+      },
+      {
+        "name": "ECE 403",
+        "children": [{
+            "name": "ECE 301"
+          }
+        ],
+        "term": 7
+      },
+      {
+        "name": "ECE 433",
+        "children": [
+          {
+            "name": "ECE 330"
+          },
+          {
+            "name": "MATH 332"
+          }
+        ],
+        "term": 7
+      },
+      {
+        "name": "ECE 432",
+        "children": [{
+          "name": "ECE 332"
+        }],
+        "term": 7
+      },
+      {
+        "name": "HIST 115",
+        "children": [],
+        "term": 7
+      }
+    ]
   }]
+ }]
 }
