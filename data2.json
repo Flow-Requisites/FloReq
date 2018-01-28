@@ -1,0 +1,182 @@
+{
+    "courses":[{
+        "name":"Introduction to Tangible Computing I",
+        "abrev":"CMPUT 274",
+        "detail":"concepts of procedural programming,basic algorithm design and analysis (lists, queues, trees, sorting, searching), and reactive interfacing with the world are learned by solving a series of problems using the Arduino platform and C/C++"
+       },
+       {
+        "name":"Introduction to Electrical and Computer Engineering",
+        "abrev":"ECE 201",
+        "detail":"Topics of interest to second year Electrical and Computer Engineering students, with special reference to industries in Alberta, including coverage of elements of ethics, equity, concepts of sustainable development and environmental stewardship, public and worker safety and health "
+       },
+       {
+        "name":"Electrical Circuits I",
+        "abrev":"ECE 202",
+        "detail":" Circuit laws: Ohm’s, KVL, KCL. Resistive voltage and current dividers. Basic loop and nodal analysis. Dependent sources. Circuit theorems: linearity, superposition, maximum power transfer, Thevenin, Norton."   
+       },
+       {
+        "name":"Introduction to Digital Logic Design",
+        "abrev":"ECE 210",
+        "detail":"Boolean algebra, truth tables, Karnaugh maps. Switching devices and their symbology with an introduction to NAND and NOR logic."
+       },
+       {
+        "name":"Differential Equations",
+        "abrev":"MATH 201",
+        "detail":"First-order equations; second-order linear equations: reduction of order, variation of parameters; Laplace transform; linear systems; power series; solution by series; separation of variables for PDEs."
+       },
+       {
+        "name":"Calculus III",
+        "abrev":"MATH 209",
+        "detail":"Partial differentiation, derivatives of integrals. Multiple integration using rectangular, cylindrical, and spherical coordinates. Vector Field Theory."
+       },
+       {
+        "name":"Formal Systems and Logic in Computing Science",
+        "abrev":"CMPUT 272",
+        "detail":"An introduction to the tools of set theory, logic, and induction, and their use in the practice of reasoning about algorithms and programs. Basic set theory. The notion of a function. Counting. "
+       },
+       {
+        "name":"Introduction to Tangible Computing II",
+        "abrev":"CMPUT 275",
+        "detail":"introduction to Computing Science. Part 2 expands to add object-oriented programming, a higher level language (Python), and more complex algorithms and data structures such as shortest paths in graphs; caching, memoization, and dynamic programming; client-server style computing; recursion"
+       },
+       {
+        "name":"Electrical Circuits II",
+        "abrev":"ECE 203",
+        "detail":" Nonlinear circuit analysis. Diodes: ideal and simple and models, single phase rectifiers. Ideal and finite gain op-amps. Treatment of RLC circuits in the time domain, frequency domain and s-plane."
+       },
+       {
+        "name":"Introduction to Microprocessors",
+        "abrev":"ECE 212",
+        "detail":"Microcomputer architecture, assembly language programming, sub-routine handling, memory and input/output system and interrupt concepts."
+       },
+       {
+        "name":"Continuous Time Signals and Systems",
+        "abrev":"ECE 240",
+        "detail":"Introduction to linear systems and signal classification. Delta function and convolution. Fourier series expansion. Fourier transform and its properties. Laplace transform. Analysis of linear time invariant (LTI) systems using the Laplace transform."
+       },
+       {
+        "name":"Electricity and Magnetism",
+        "abrev":"PHYS 230",
+        "detail":"Electric fields, Gauss’ Law; electric potential; capacitance and dielectrics; electric current and resistance; magnetic fields, Ampere’s Law; Faraday’s Law; inductance; magnetic properties of matter."
+       },
+       {
+        "name":"Electronic Devices",
+        "abrev":"ECE 302",
+        "detail":"junction semiconductor basics, charge flow and diode equation. Zener diodes. BJT and MOSFET devices and operating regions. Amplifier basics: biasing, gain, input and output resistance, analysis and design. Large signal effects."    
+       },
+       {
+        "name":"Computer Organization and Architecture",
+        "abrev":"ECE 311",
+        "detail":"Survey of modern computer architecture and design concepts. Benchmarks, instruction set design and encoding. Pipelined and superscalar processors. Techniques for exposing and exploiting instruction-level parallelism."
+       },
+       {
+        "name":"Object-Oriented Software Design",
+        "abrev":"ECE 325",
+        "detail":"Software engineering principles of object-oriented design: basic data structures, classes and objects, creation tactics, inheritance, composition, polymorphism, interfaces, compilation and execution."
+       },
+       {
+        "name":"Discrete Time Signals and Systems",
+        "abrev":"ECE 340",
+        "detail":"Discrete time signals and systems; Sampled signals and sampling theorem, aliasing, A/D converter; Z-transform, stability analysis; Discrete-time Fourier transform; Discrete Fourier transform."
+       },
+       {
+        "name":"Engineering Thermodynamics",
+        "abrev":"CH E 243",
+        "detail":"An introduction to the first and second laws of thermodynamics."
+       },
+       {
+        "name":"Engineering Economy",
+        "abrev":"ENG M 310",
+        "detail":"Application of the fundamentals of economics to engineering alternatives in planning, developing and managing industrial projects."
+       },
+       {
+        "name":"Introduction to File and Database Management",
+        "abrev":"CMPUT 291",
+        "detail":"Basic concepts in computer data organization and information processing; entity-relationship model; relational model; SQL and other relational query languages; storage architecture."
+       },
+       {
+        "name":"Operating System Concepts",
+        "abrev":"CMPUT 379",
+        "detail":"Processes: process state transitions; operations on processes; interrupt processing; parallel processing; multiprocessor considerations; resource allocation; critical sections and events."   
+       },
+       {
+        "name":"Computer Interfacing",
+        "abrev":"ECE 315",
+        "detail":"Design and use of digital interfaces, including memory, serial, parallel, synchronous and asynchronous interfaces. Hardware implementations of interrupts, buses, input/output devices and direct memory access." 
+       },
+       {
+        "name":"Introduction to Accounting",
+        "abrev":"ACCTG 300",
+        "detail":"Provides a basic understanding of accounting: how accounting numbers are generated, the meaning of accounting reports, and how to use accounting reports to make decisions."
+       },
+       {
+        "name":"Non-Procedural Programming Languages",
+        "abrev":"CMPUT 325",
+        "detail":"A study of the theory, run-time structure, and implementation of selected non-procedural programming languages."
+       },
+       {
+        "name":"Introduction to Studies in Science, Technology and Society",
+        "abrev":"STS 200",
+        "detail":"n examination of the interrelations of science, technology, society and environment, emphasizing an interdisciplinary humanities and social sciences perspective."
+       },
+       {
+        "name":"Introduction to Software Engineering",
+        "abrev":"CMPUT 301",
+        "detail":" Object-oriented design and analysis, with interactive applications as the primary example. Topics include: software process; revision control; Unified Modeling Language (UML)"
+       },
+       {
+        "name":"Digital Electronics",
+        "abrev":"ECE 304",
+        "detail":"MOS digital circuits, logic gates, threshold voltages. MOS logic families: design and simulation. CMOS timing: propagation delay, rise and fall times. Storage elements, memory, I/O and interfacing."
+       },
+       {
+        "name":"Probability for Electrical and Computer Engineers",
+        "abrev":"ECE 342",
+        "detail":"Deterministic and probabilistic models. Basics of probability theory: random experiments, axioms of probability, conditional probability and independence. Discrete and continuous random variables."
+       },
+       {"name":"Advanced Digital Logic Design",
+        "abrev":"ECE 410",
+        "detail":"Review of classical logic design methods. Introduction to the hardware description language VHDL. Logic simulation principles. Digital system design. Digital system testing and design for testability. Arithmetic circuits."
+        },
+        {
+        "name":"Engineering Safety and Loss Management",
+        "abrev":"ENGG 404",
+        "detail":"A broad study of the principles and practices of providing a safe and reliable working environment in all types of major industries. Government regulatory requirements are reviewed." 
+        },
+        {
+         "name":"Integrated Circuit Design",
+         "abrev":"ECE 403",
+         "detail":"Very Large Scale Integration (VLSI) design techniques and their application. Electrical characteristics of MOSFET devices and CMOS circuits."    
+        },
+        {
+         "name":"Parallel and Distributed Programming",
+         "abrev":"ECE 420",
+         "detail":"Overview of parallel/distributed computing including concepts and terminology. Principles of programming with shared memory and synchronization methods."
+        },
+        {
+          "name":"Data Communication Networks",
+          "abrev":"ECE 487",
+          "detail":"Network topologies. Layered architectures and the Open Systems Interconnection (OSI) reference model. Peer-to-peer protocols, medium access control protocols, and local area network standards."  
+        },
+        {
+          "name":"Computer Engineering Design Project",
+          "abrev":"ECE 492",
+          "detail":" Design of microprocessor systems, input/output systems, programmable timers, address decoding and interrupt circuitry."
+        },
+        {
+          "name":"The Practice of the Engineering Profession",
+          "abrev":"ENGG 400",
+          "detail":"The technical and professional duties and responsibilities of the engineer; the ethics of the engineering profession; technical and professional organizations."
+        },
+        {
+         "name":"Materials Science I",
+         "abrev":"MAT E 201",
+         "detail":"An introduction to the science of materials from the standpoint of the relationships between atomic, molecular and crystal structure to material properties."   
+        },
+        {
+         "name":"Software Testing and Maintenance Engineering",
+         "abrev":"ECE 322",
+         "detail":"Risk analysis and metrics for software testing. Software testing process, including test planning, design, implementation, execution, and evaluation."
+        }
+  
+    ]}
