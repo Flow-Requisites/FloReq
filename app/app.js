@@ -4,21 +4,31 @@ var coursedata = require('../data2.json');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Setup connection to MongoDB
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://root:floreqadmin@ds117848.mlab.com:17848/floreqs');
-mongoose.connection.on('error', function () {
-  console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
-  process.exit(1);
-});
+var mongo = require('mongodb').MongoClient;
+var db;
+var url = 'mongodb://root:floreqadmin@ds117848.mlab.com:17848/floreqs';
 
-var server = app.listen(3000, listening);
-
-function listening() {
-  console.log('listening ...');
+function handleError(res, reason, message, code) {
+  console.log("ERROR: " + reason);
+  res.status(code || 500).json({"error": message});
 }
+
+mongo.connect(url, function (err, database) {
+  if(err) {
+    console.log(err);
+    process.exit(1);
+  }
+
+  db = database.db('floreqs');
+  var server = app.listen(3000 || 8080, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+  });
+})
 
 app.get('/search/department/', getPreReqs);
 
@@ -85,4 +95,26 @@ app.get('/search/course/:coursename', getCourse);
 function getCourse(request, response) {
   var reply;
   var course = request.params.coursename;
+}
+
+app.post('/insert/department/', insertDepartment);
+
+function insertDepartment(req, res) {
+  console.log(req.body);
+  if (!req.body.name) {
+    handleError(res, "Invalid user input", "Must provide a name.", 400);
+  } else {
+    var department = {
+      "name" : req.name,
+      "specializations": []
+    };
+
+    db.collection("department").insertOne(department, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to create new department.");
+      } else {
+        res.status(201).json(doc.ops[0]);
+      }
+    });
+  }
 }
