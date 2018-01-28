@@ -1,10 +1,14 @@
 var testdata = require('../data.json');
+var coursedata = require('../data2.json');
 
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
 
+// Setup connection to MongoDB
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/myapp');
+mongoose.connect('mongodb://root:floreqadmin@ds117848.mlab.com:17848/floreqs');
 mongoose.connection.on('error', function () {
   console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
   process.exit(1);
@@ -67,11 +71,11 @@ function getAllCourses(request, response) {
   //TODO return all courses instaed of just data;
   // need temp json file that has courses
   var reply;
-  var data = testdata;
+  var data = coursedata;
 
   reply = {
     status: "found",
-    data: { "courses" : data }
+    data: data
   }
   response.send(reply);
 }
