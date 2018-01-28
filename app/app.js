@@ -1,6 +1,7 @@
 var testdata = require('../data.json');
 
 var express = require('express');
+
 var app = express();
 var server = app.listen(3000, listening);
 
@@ -57,6 +58,7 @@ app.get('/search/courses/', getAllCourses);
 
 function getAllCourses(request, response) {
   //TODO return all courses instaed of just data;
+  // need temp json file that has courses
   var reply;
   var data = testdata;
 
