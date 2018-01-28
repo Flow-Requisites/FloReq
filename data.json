@@ -499,9 +499,7 @@
       },
       {
         "name": "ECE 220",
-        "children": [{
-          "name": "ECE 220"
-        }],
+        "children": [],
         "term": 3
       },
       {

@@ -1,4 +1,8 @@
 
+.hidecontent {
+    visibility: hidden; 
+}
+
 body {
   margin-right: 10vw;
   margin-left: 10vw;
@@ -41,11 +45,27 @@ body {
     background-color: #eee;
     text-align: center;
     padding: 10px;
-    height: 75vh;
+    height: 80vh;
 }
 
 .sidebar #title {
     text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.course-list li {
+    width: 50%;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    display: table
+}
+
+.course-list p {
+    font-size: 0.75em;
+    margin: 0;
+    vertical-align: middle;
+    display: table-cell
 }
 
 .wrapper {
