@@ -1,8 +1,15 @@
 var testdata = require('../data.json');
 
 var express = require('express');
-
 var app = express();
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/myapp');
+mongoose.connection.on('error', function () {
+  console.log('MongoDB Connection Error. Please make sure that MongoDB is running.');
+  process.exit(1);
+});
+
 var server = app.listen(3000, listening);
 
 function listening() {
