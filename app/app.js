@@ -92,7 +92,7 @@ function getAllSpecializations(req, res) {
 
 app.get('/search/courses/', getAllCourses);
 
-function getAllCourses(request, response) {
+function getAllCourses(req, res) {
   db.collection(COURSE_COLLECTION).find({}).toArray(function(err, docs) {
     if (err) {
       handleError(res, err.message, "Failed to get courses.");
@@ -204,41 +204,45 @@ function insertSpecialization(req, res) {
 app.post('/insert/course/', insertCourse);
 
 function insertCourse(req, res) {
-  var test;
+  var specializations;
   var specs = req.body.specializations
-  if (!req.body.name || specs.length <= 0 ) {
-    handleError(res, "Invalid user input", "Must provide a course name and specializations.", 400);
+  if (!req.body.abbr || specs.length <= 0 ) {
+    handleError(res, "Invalid user input", "Must provide a course abbr and specializations.", 400);
   } else {
+    console.log("specs");
     console.log(specs);
     // Get specializations
-    db.collection(SPECIALIZATION_COLLECTION).find({ name : { "$in" : specs } }).toArray(function(err, docs) {
+    db.collection(SPECIALIZATION_COLLECTION).find({ name : { $in : specs } }).toArray(function(err, docs) {
       if (err) {
         handleError(res, err.message, "Failed to get specializations.");
       } else {
-        specs = docs;
-        test = docs;
+        specializations = docs;
+        console.log(specializations);
       }
     });
 
-    console.log(test);
+    var course = {
+      "abbr" : req.body.abbr,
+      "name" : req.body.name,
+      "description" : req.body.description,
+      "prerequisites" : req.body.prerequisites
+    };
 
-    // var specialization = {
-    //   "name" : req.body.name,
-    //   "courses": []
-    // };
-
-    // db.collection(SPECIALIZATION_COLLECTION).insertOne(specialization, function(err, doc) {
-    //   if (err) {
-    //     handleError(res, err.message, "Failed to create new specialization.");
-    //   } else {
-    //     department.specializations.push(doc.ops[0]._id);
-    //     db.collection(DEPARTMENT_COLLECTION).updateOne(
-    //       { '_id' : department._id },
-    //       { $set: { "specializations" : department.specializations } }
-    //     );
-    //     console.log(department)
-    //     res.status(201).json(doc.ops[0]);
-    //   }
-    // });
+    db.collection(COURSE_COLLECTION).insertOne(course, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to create new course.");
+      } else {
+        for (var i = 0; i < specializations.length; i++) {
+          console.log(i);
+          specializations[i].courses.push(doc.ops[0]._id);
+          console.log(specializations[i].courses);
+          db.collection(SPECIALIZATION_COLLECTION).updateOne(
+            { '_id' : specializations[i]._id },
+            { $set: { "courses" : specializations[i].courses } }
+          );
+        }
+        res.status(201).json(doc.ops[0]);
+      }
+    });
   }
 }
