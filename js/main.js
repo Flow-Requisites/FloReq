@@ -53,7 +53,9 @@ $(function () {
           links = treeData.descendants().slice(1);
 
       // Normalize for fixed-depth.
-      nodes.forEach(function(d){ d.y = d.depth * 180; });
+      nodes.forEach(function(d){ 
+        d.y = width - d.depth * 180;
+      });
 
       // ****************** Nodes section ***************************
 
@@ -72,7 +74,7 @@ $(function () {
       // Add Circle for the nodes
       nodeEnter.append('circle')
           .attr('class', 'node')
-          .attr('r', 1e-6)
+          .attr('r', 4)
           .style("fill", function(d) {
               return d._children ? "lightsteelblue" : "#fff";
           });
@@ -81,10 +83,10 @@ $(function () {
       nodeEnter.append('text')
           .attr("dy", ".35em")
           .attr("x", function(d) {
-              return d.children || d._children ? -13 : 13;
+              return d.children || d._children ? 13 : -13;
           })
           .attr("text-anchor", function(d) {
-              return d.children || d._children ? "end" : "start";
+              return d.children || d._children ? "start" : "end";
           })
           .text(function(d) { return d.data.name; });
 
@@ -100,7 +102,7 @@ $(function () {
 
       // Update the node attributes and style
       nodeUpdate.select('circle.node')
-        .attr('r', 10)
+        .attr('r', 4)
         .style("fill", function(d) {
             return d._children ? "lightsteelblue" : "#fff";
         })
@@ -117,7 +119,7 @@ $(function () {
 
       // On exit reduce the node circles size to 0
       nodeExit.select('circle')
-        .attr('r', 1e-6);
+        .attr('r', 4);
 
       // On exit reduce the opacity of text labels
       nodeExit.select('text')
