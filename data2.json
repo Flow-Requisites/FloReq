@@ -1,5 +1,66 @@
 {
-    "courses":[{
+    "courses":[
+    	{
+        "name":"Introductory University Chemistry I",
+        "abrev":"CHEM 103",
+        "detail":"Atoms and molecules, states of matter, chemistry of the elements."
+       },
+       {
+        "name":"Orientation to the Engineering Profession I",
+        "abrev":"ENGG 100",
+        "detail": "An introduction to the Faculty of Engineering and the engineering profession: the engineering disciplines; study skills; cooperative education; work opportunities; engineering and society including elements of ethics, equity, concepts of sustainable development and environmental stewardship, public and worker safety and health considerations including the context of the Alberta Occupational Health and Safety Act."
+       },
+       {
+        "name":"Engineering Mechanics",
+        "abrev":"ENGG 130",
+        "detail":"Equilibrium of planar systems. Analysis of statically determinate trusses and frames. Friction. Centroids and centres of gravity. Forces and moments in beams. Second moments of area."
+       },
+       {
+        "name":"Calculus I",
+        "abrev":"MATH 100",
+        "detail":"Review of numbers, inequalities, functions, analytic geometry; limits, continuity; derivatives and applications, Taylor polynomials; log, exp, and inverse trig functions. Integration, fundamental theorem of calculus substitution, trapezoidal and Simpson’s rules. "
+       },
+       {
+        "name":"Introductory University Chemistry II",
+        "abrev":"CHEM 105",
+        "detail":"Rates of reactions, thermodynamics and equilibrium, electrochemistry, modern applications of chemistry."
+       },
+       {
+        "name":"Wave Motion, Optics, and Sound",
+        "abrev":"PHYS 130",
+        "detail":"Geometrical optics, optical instruments, oscillations, waves, sound, interference, diffraction."
+       },
+       {
+        "name":"Introduction to Microeconomics",
+        "abrev":"ECON 101",
+        "detail":"How markets and governments determine which products are produced and how income is distributed in the Canadian economy."
+       },
+       {
+        "name":"Computer Programming for Engineers",
+        "abrev":"ENCMP 100",
+        "detail":"Fundamentals of computer programming with emphasis on solving engineering problems. Structure and syntax of computer programs, variables, data types, data structures, control structures, functions, input/output operations, debugging, software development process."
+       },
+       {
+        "name":"Orientation to the Engineering PRofession II",
+        "abrev":"ENGG 101",
+        "detail":"An introduction to the engineering profession and its challenges: the engineering disciplines, career fields; professional responsibilities of the engineer including elements of ethics, equity, concepts of sustainable development and environmental stewardship, public and worker safety and health considerations including the context of the Alberta Occupational Health and Safety Act."
+       },
+       {
+        "name":"Mechanics",
+        "abrev":"EN PH 131",
+        "detail":"Kinematics and dynamics of particles; gravitation; work and energy; linear momentum; angular momentum; systems of particles; introduction to dynamics of rigid bodies."
+       },
+       {
+        "name":"Calculus II",
+        "abrev":"MATH 101",
+        "detail":"Area between curves, techniques of integration. Applications of integration to planar areas and lengths, volumes and masses. First order ordinary differential equations: separable, linear, direction fields, Euler’s method, applications. Infinite series, power series, Taylor expansions with remainder terms. Polar coordinates. Rectangular, spherical and cylindrical coordinates in 3-dimensional space. Parametric curves in the plane and space: graphing, arc length, curvature; normal binormal, tangent plane in 3-dimensional space. Volumes and surface areas of rotation."
+       },
+       {
+        "name":"Applied Linear Algebra",
+        "abrev":"MATH 102",
+        "detail":"Vectors and matrices, solution of linear equations, equations of lines and planes, determinants, matrix algebra, orthogonality and applications (Gram-Schmidt), eigenvalues and eigenvectors and applications, complex numbers."
+       },
+    	{
         "name":"Introduction to Tangible Computing I",
         "abrev":"CMPUT 274",
         "detail":"concepts of procedural programming,basic algorithm design and analysis (lists, queues, trees, sorting, searching), and reactive interfacing with the world are learned by solving a series of problems using the Arduino platform and C/C++"
