@@ -60,7 +60,7 @@ $( document ).ready(function () {
       nodes.forEach(function(d){ 
         d.y = width - d.depth * 180;
       });
-
+      debugger;
       // ****************** Nodes section ***************************
 
       // Update the nodes...
