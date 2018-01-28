@@ -34,37 +34,37 @@ mongo.connect(url, function (err, database) {
   });
 })
 
-app.get('/search/department/', getPreReqs);
+// app.get('/search/department/', getPreReqs);
 
-function getPreReqs(request, response) {
-  var department = request.query.name;
-  var specialization = request.query.spec;
-  var reply;
+// function getPreReqs(request, response) {
+//   var department = request.query.name;
+//   var specialization = request.query.spec;
+//   var reply;
 
-  if (testdata.department.some(item => item.name === department)) {
-    var tmp = testdata.department.find(item => item.name == department);
-    tmp = tmp.specialization.find(item => item.name === specialization);
-    if (tmp) {
-      reply = {
-        status: "found",
-        department: department,
-        data: tmp
-      }
-    }
-    else {
-      reply = {
-        status: "specialization not found",
-        department: department
-      }
-    }
-  }
-  else {
-    reply = {
-      status: "department not found"
-    }
-  }
-  response.send(reply);
-}
+//   if (testdata.department.some(item => item.name === department)) {
+//     var tmp = testdata.department.find(item => item.name == department);
+//     tmp = tmp.specialization.find(item => item.name === specialization);
+//     if (tmp) {
+//       reply = {
+//         status: "found",
+//         department: department,
+//         data: tmp
+//       }
+//     }
+//     else {
+//       reply = {
+//         status: "specialization not found",
+//         department: department
+//       }
+//     }
+//   }
+//   else {
+//     reply = {
+//       status: "department not found"
+//     }
+//   }
+//   response.send(reply);
+// }
 
 app.get('/search/departments/', getAllDepartments);
 
@@ -166,6 +166,44 @@ app.post('/insert/specialization/', insertSpecialization);
 
 function insertSpecialization(req, res) {
   var department;
+  if (!req.body.name || !req.body.department ) {
+    handleError(res, "Invalid user input", "Must provide a specialization name and department.", 400);
+  } else {
+
+    // Get department collection
+    db.collection(DEPARTMENT_COLLECTION).findOne({name: req.body.department}, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to get department.");
+        return;
+      } else {
+        department = doc;
+      }
+    });
+
+    var specialization = {
+      "name" : req.body.name,
+      "courses": []
+    };
+
+    db.collection(SPECIALIZATION_COLLECTION).insertOne(specialization, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to create new specialization.");
+      } else {
+        department.specializations.push(doc.ops[0]._id);
+        db.collection(DEPARTMENT_COLLECTION).updateOne(
+          { '_id' : department._id },
+          { $set: { "specializations" : department.specializations } }
+        );
+        console.log(department)
+        res.status(201).json(doc.ops[0]);
+      }
+    });
+  }
+}
+
+app.post('/insert/course/', insertCourse);
+
+function insertCourse(req, res) {
   if (!req.body.name || !req.body.department ) {
     handleError(res, "Invalid user input", "Must provide a specialization name and department.", 400);
   } else {
