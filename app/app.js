@@ -204,37 +204,41 @@ function insertSpecialization(req, res) {
 app.post('/insert/course/', insertCourse);
 
 function insertCourse(req, res) {
-  if (!req.body.name || !req.body.department ) {
-    handleError(res, "Invalid user input", "Must provide a specialization name and department.", 400);
+  var test;
+  var specs = req.body.specializations
+  if (!req.body.name || specs.length <= 0 ) {
+    handleError(res, "Invalid user input", "Must provide a course name and specializations.", 400);
   } else {
-
-    // Get department collection
-    db.collection(DEPARTMENT_COLLECTION).findOne({name: req.body.department}, function(err, doc) {
+    console.log(specs);
+    // Get specializations
+    db.collection(SPECIALIZATION_COLLECTION).find({ name : { "$in" : specs } }).toArray(function(err, docs) {
       if (err) {
-        handleError(res, err.message, "Failed to get department.");
-        return;
+        handleError(res, err.message, "Failed to get specializations.");
       } else {
-        department = doc;
+        specs = docs;
+        test = docs;
       }
     });
 
-    var specialization = {
-      "name" : req.body.name,
-      "courses": []
-    };
+    console.log(test);
 
-    db.collection(SPECIALIZATION_COLLECTION).insertOne(specialization, function(err, doc) {
-      if (err) {
-        handleError(res, err.message, "Failed to create new specialization.");
-      } else {
-        department.specializations.push(doc.ops[0]._id);
-        db.collection(DEPARTMENT_COLLECTION).updateOne(
-          { '_id' : department._id },
-          { $set: { "specializations" : department.specializations } }
-        );
-        console.log(department)
-        res.status(201).json(doc.ops[0]);
-      }
-    });
+    // var specialization = {
+    //   "name" : req.body.name,
+    //   "courses": []
+    // };
+
+    // db.collection(SPECIALIZATION_COLLECTION).insertOne(specialization, function(err, doc) {
+    //   if (err) {
+    //     handleError(res, err.message, "Failed to create new specialization.");
+    //   } else {
+    //     department.specializations.push(doc.ops[0]._id);
+    //     db.collection(DEPARTMENT_COLLECTION).updateOne(
+    //       { '_id' : department._id },
+    //       { $set: { "specializations" : department.specializations } }
+    //     );
+    //     console.log(department)
+    //     res.status(201).json(doc.ops[0]);
+    //   }
+    // });
   }
 }
