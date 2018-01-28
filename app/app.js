@@ -48,7 +48,7 @@ function getAllDepartments(request, response) {
 
   reply = {
     status: "found",
-    data: data
+    data: { "departments": data }
   }
   response.send(reply);
 }
@@ -62,7 +62,7 @@ function getAllCourses(request, response) {
 
   reply = {
     status: "found",
-    data: data
+    data: { "courses" : data }
   }
   response.send(reply);
 }
