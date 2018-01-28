@@ -12,7 +12,7 @@ $( document ).ready(function () {
   // appends a 'group' element to 'svg'
   // moves the 'group' element to the top left margin
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select(".content").append("svg")
       .attr("width", width + margin.right + margin.left)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -58,9 +58,8 @@ $( document ).ready(function () {
 
       // Normalize for fixed-depth.
       nodes.forEach(function(d){ 
-        d.y = width - d.depth * 180;
+        d.y = width - 50 - d.depth * 180;
       });
-      debugger;
       // ****************** Nodes section ***************************
 
       // Update the nodes...
