@@ -126,7 +126,7 @@ function getCourse(req, res) {
               return;
             }
             else{
-              if("doc1 != null"){
+              if(doc1 != null){
                 console.log('success abbr');
                 res.status(200).json(doc1);
               }
@@ -166,7 +166,7 @@ function getDepartment(req, res) {
             return;
           }
           else{
-            if("doc1 != null"){
+            if(doc1 != null){
               console.log('success name');
               res.status(200).json(doc1);
             }
@@ -206,7 +206,7 @@ function getSpecialization(req, res) {
             return;
           }
           else{
-            if("doc1 != null"){
+            if(doc1 != null){
               console.log('success name');
               res.status(200).json(doc1);
             }
