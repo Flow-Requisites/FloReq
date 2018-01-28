@@ -61,10 +61,6 @@ body {
     display: table
 }
 
-.course-list li:hover{
-    background-color: #ddd;
-}
-
 .course-list p {
     font-size: 0.75em;
     margin: 0;
