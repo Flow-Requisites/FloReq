@@ -118,7 +118,7 @@
 					"term": 2
 				},
 				{
-					"name": "ENGLISH ELECTIVE",
+					"name": "English",
 					"children": [],
 					"term": 2
 
@@ -323,7 +323,7 @@
 					"term": 7
 				},
 				{
-					"name": "EC 492",
+					"name": "ECE 492",
 					"children": [{
 							"name": "ECE 315"
 						},
