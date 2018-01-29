@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="http://d3js.org/d3-selection-multi.v1.js"></script>
     <script src="js/main.js"></script>
     <script src="js/list.js"></script>
 
@@ -25,22 +26,24 @@
   <body>
     <div class="wrapper">
         <div class="box header">Flow Requisites</div>
-        <div class="box nav-bar" id="nav-placeholder"></div>
         <div class="box sidebar">
-            <input id="uni-input" list="uni" placeholder="Select University" type="text" multiple>
-            <datalist id="uni">
-                <option value="University of Alberta">
-            </datalist>
-            <input id="prog-input" list="prog" placeholder="Select Program" type="text" multiple>
-            <datalist id="prog">
-                <option value="Computer Traditional">
-                <option value="Electrical Traditional">
-            </datalist>
+            <div class="selection">
+                <input id="uni-input" list="uni" placeholder="Select University" type="text" multiple>
+                <datalist id="uni">
+                    <option value="University of Alberta">
+                </datalist>
+                <input id="prog-input" list="prog" placeholder="Select Program" type="text" multiple>
+                <datalist id="prog">
+                    <option value="Computer Traditional">
+                    <option value="Electrical Traditional">
+                </datalist>
+            </div>
             <p id="title">Courses Needed</p>
             <div class="course-list"></div>
         </div>
         <div class="box content">
             <div class="course-info"></div>
+            <svg width="960" height="600" style="border:solid"></svg>
         </div>
         <div class="box footer">Presented by the VR Team.</div>
     </div>

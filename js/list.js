@@ -1,4 +1,5 @@
 $( document ).ready(function () {
+    $("#title").css("display","none");
 
     $('#prog-input').on('input', function() {
         if ($("#prog-input")[0].value == "Computer Traditional" && $("#uni-input")[0].value == "University of Alberta") {
@@ -29,6 +30,7 @@ $( document ).ready(function () {
     });
 
     function renderList(num) {
+        $("#title").css("display","block");
         d3.json("../data.json", function(error, data) {
             courses = data.department[num].specialization[0].children;
             $('ul').remove();

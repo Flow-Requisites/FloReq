@@ -9,6 +9,10 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+ul {
+    padding: 0;
+}
+
 .sidebar {
   grid-area: sidebar;
 }
@@ -23,6 +27,7 @@ body {
   background-color: #fff;
   border-bottom: #222 solid 2px;
   font-size: 3em;
+  margin-bottom: 10px;
 }
 
 .nav-bar {
@@ -45,12 +50,18 @@ body {
     background-color: #eee;
     text-align: center;
     padding: 10px;
-    height: 80vh;
+    height: 85vh;
 }
 
 .sidebar #title {
     text-decoration: underline;
     margin-bottom: 5px;
+    border-top: rgba(22,22,22,0.5) solid 2px;
+    padding-top: 10px;
+}
+
+.selection {
+    height: 90px;
 }
 
 .course-list li {
@@ -58,7 +69,8 @@ body {
     height: 25px;
     margin: 0;
     padding: 0;
-    display: table
+    display: table;
+    float: left;
 }
 
 .course-list p {
@@ -70,6 +82,7 @@ body {
 
 .course-info {
     padding: 1em;
+    width: 70%;
 }
 
 .course-info-title {
@@ -92,11 +105,10 @@ body {
     display: grid;
     width: 60vw;
     grid-gap: 10px;
-    grid-template-columns: 300px 900px;
-    grid-template-rows: 70px 50px 1fr 50px;
+    grid-template-columns: 320px 900px;
+    grid-template-rows: 85px 1fr 50px;
     grid-template-areas:
     "header header"
-    "navbar navbar"
     "sidebar content"
     "footer footer";
     color: #eee;
