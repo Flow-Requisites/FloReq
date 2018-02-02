@@ -8,6 +8,7 @@ var COURSE_COLLECTION = 'course';
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var path = require('path');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -327,3 +328,9 @@ function insertCourse(req, res) {
     });
   }
 }
+
+// host index file
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/../index.html'));
+  //__dirname : It will resolve to your project folder.
+});
